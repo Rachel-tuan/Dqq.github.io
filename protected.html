@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Protected Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>请输入密码访问页面</h1>
+  <input type="password" id="password" placeholder="输入密码">
+  <button onclick="checkPassword()">提交</button>
+
+  <div id="content" class="hidden">
+    <h2>欢迎访问！</h2>
+    <p>这里是受保护的页面内容。</p>
+  </div>
+
+  <script>
+    function checkPassword() {
+      const input = document.getElementById('password').value;
+      const correctPassword = "12345"; // 设置密码
+
+      if (input === correctPassword) {
+        document.getElementById('content').classList.remove('hidden');
+        document.getElementById('password').style.display = 'none';
+        document.querySelector('button').style.display = 'none';
+        document.querySelector('h1').textContent = '访问成功！';
+      } else {
+        alert('密码错误，请重试！');
+      }
+    }
+  </script>
+</body>
+</html>
