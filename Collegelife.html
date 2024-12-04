@@ -1,29 +1,18 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>网站首页</title>
+  <title>密码保护页面</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      line-height: 1.6;
-      margin: 20px;
+      text-align: center;
+      margin: 50px;
     }
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-    }
-    img {
-      max-width: 100%;
-      height: auto;
-    }
-    a {
-      color: #007BFF;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
+    #protected-content {
+      display: none; /* 默认隐藏受保护内容 */
     }
     .button {
       display: inline-block;
@@ -33,6 +22,7 @@
       color: white;
       text-decoration: none;
       border-radius: 5px;
+      font-size: 16px;
     }
     .button:hover {
       background-color: #0056b3;
@@ -40,62 +30,77 @@
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>欢迎访问我的网站</h1>
-    <a href="protected.html" class="button">进入受保护页面</a>
+  <h1>欢迎访问我的网站</h1>
+  <a href="#" class="button" id="enter-button">点击输入密码</a>
 
 
-    <div class="container">
-      <h1>open a new life</h1>
-      <p>welcome to CMU in my eyes</p>
+  <div id="protected-content">
+    <h1>open a new life</h1>
+    <p>welcome to CMU in my eyes</p>
 
-      <h2>this is my abundent college life</h2>
-      <p>大学生一个，我的个人世界打造基地，欢迎来访~</p>
+    <h2>this is my abundent college life</h2>
+    <p>大学生一个，我的个人世界打造基地，欢迎~</p>
 
-      <h2>生活展示</h2>
-      <img src="images/colf00.jpg" alt="认准的路就别问还有多远">
-      <p>不远万里</p>
-      <img src="images/colf02.jpg" alt="my college school">
-      <p>初入大学</p>
-      <img src="images/colf01.jpg" alt="scenery">
-      <p>初入大学</p>
-      <img src="images/colf03.jpg" alt="scenery">
-      <p>初入大学</p>
-      <img src="images/colf04.jpg" alt="scenery">
-      <p>初入大学</p>
-      <img src="images/colf05.jpg" alt="scenery">
-      <p>初入大学</p>
-      <img src="images/snow01.jpg" alt="snow">
-      <p>下雪啦</p>
-      <img src="images/snow02.jpg" alt="snow">
-      <p>下雪啦</p>
-      <img src="images/snow03.jpg" alt="snow">
-      <p>下雪啦</p>
-      <img src="images/snow04.jpg" alt="snow">
-      <p>下雪啦</p>
-      <img src="images/snow05.jpg" alt="snow">
-      <p>下雪啦</p>
-      <img src="images/snow06.jpg" alt="snow">
-      <p>下雪啦</p>
-      <img src="images/snow07.jpg" alt="snow">
-      <p>下雪啦</p>
-      <img src="images/snow08.jpg" alt="snow">
-      <p>下雪啦</p>
-      <img src="images/snow09.jpg" alt="snow">
-      <p>下雪啦</p>
-      <img src="images/snow10.jpg" alt="snow">
-      <p>下雪啦</p>
-      <img src="images/snow11.jpg" alt="snow">
-      <p>下雪啦</p>
-      <img src="images/snow12.jpg" alt="snow">
-      <p>下雪啦</p>
-      <img src="images/snow13.jpg" alt="snow">
-      <p>下雪啦</p>
-      <img src="images/snow14.jpg" alt="snow">
-      <p>下雪啦</p>
-      <img src="images/snow15.jpg" alt="enjoy snow">
-      <p>下雪啦</p>
-    </div>
+    <h2>生活展示</h2>
+    <img src="images/colf00.jpg" alt="认准的路就别问还有多远">
+    <p>不远万里</p>
+    <img src="images/colf02.jpg" alt="my college school">
+    <p>初入大学</p>
+    <img src="images/colf01.jpg" alt="scenery">
+    <p>初入大学</p>
+    <img src="images/colf03.jpg" alt="scenery">
+    <p>初入大学</p>
+    <img src="images/colf04.jpg" alt="scenery">
+    <p>初入大学</p>
+    <img src="images/colf05.jpg" alt="scenery">
+    <p>初入大学</p>
+    <img src="images/snow01.jpg" alt="snow">
+    <p>下雪啦</p>
+    <img src="images/snow02.jpg" alt="snow">
+    <p>下雪啦</p>
+    <img src="images/snow03.jpg" alt="snow">
+    <p>下雪啦</p>
+    <img src="images/snow04.jpg" alt="snow">
+    <p>下雪啦</p>
+    <img src="images/snow05.jpg" alt="snow">
+    <p>下雪啦</p>
+    <img src="images/snow06.jpg" alt="snow">
+    <p>下雪啦</p>
+    <img src="images/snow07.jpg" alt="snow">
+    <p>下雪啦</p>
+    <img src="images/snow08.jpg" alt="snow">
+    <p>下雪啦</p>
+    <img src="images/snow09.jpg" alt="snow">
+    <p>下雪啦</p>
+    <img src="images/snow10.jpg" alt="snow">
+    <p>下雪啦</p>
+    <img src="images/snow11.jpg" alt="snow">
+    <p>下雪啦</p>
+    <img src="images/snow12.jpg" alt="snow">
+    <p>下雪啦</p>
+    <img src="images/snow13.jpg" alt="snow">
+    <p>下雪啦</p>
+    <img src="images/snow14.jpg" alt="snow">
+    <p>下雪啦</p>
+    <img src="images/snow15.jpg" alt="enjoy snow" style="max-width: 100%; height: auto;">
+    <p>下雪啦</p>
   </div>
+
+  <script>
+    document.getElementById("enter-button").addEventListener("click", function (e) {
+      e.preventDefault(); // 防止按钮的默认行为
+
+      const password = prompt("请输入访问密码：");
+      const correctPassword = "418418"; // 设置密码
+
+      if (password === correctPassword) {
+        // 如果密码正确，显示受保护内容并隐藏按钮
+        document.getElementById("protected-content").style.display = "block";
+        document.getElementById("enter-button").style.display = "none";
+      } else {
+        alert("密码错误，无法访问！");
+      }
+    });
+  </script>
 </body>
 </html>
