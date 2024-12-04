@@ -26,22 +26,23 @@
     .button:hover {
       background-color: #0056b3;
     }
-    /* 图片网格布局 */
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* 自动调整列数 */
-      gap: 15px; /* 图片之间的间距 */
-      margin-top: 20px;
+     /* 一横条布局样式 */
+    .horizontal-item {
+      display: flex;
+      align-items: center; /* 垂直居中 */
+      margin: 20px 0; /* 每个条目之间的间距 */
     }
-    .gallery img {
-      width: 100%; /* 图片占满单元格 */
+    .horizontal-item img {
+      width: 200px; /* 图片宽度 */
       height: auto; /* 保持比例 */
       border-radius: 5px; /* 圆角（可选） */
+      margin-right: 20px; /* 图片与文字之间的间距 */
     }
-    .gallery p {
-      font-size: 14px;
+    .horizontal-item p {
+      text-align: left; /* 左对齐文字 */
+      font-size: 16px;
       color: #333;
-      margin-top: 5px;
+      margin: 0; /* 去掉段落默认外边距 */
     }
   </style>
 </head>
@@ -59,7 +60,7 @@
 
     <h2>生活展示</h2>
     <!-- 图片网格布局 -->
-    <div class="gallery">
+    <div class="horizontal-item">
       <div>
         <img src="images/colf00.jpg" alt="认准的路就别问还有多远">
         <p>不远万里</p>
